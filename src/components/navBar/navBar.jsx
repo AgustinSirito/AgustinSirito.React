@@ -11,12 +11,12 @@ const NavBar = () => {
             <Navbar bg="light" data-bs-theme="light">
                     <Container>
                     <Navbar.Brand>
-                        <a className="navbar-brand" href="#home">
+                        <a className="navbar-brand" href="/">
                             <img src={logo} alt="Logo de Mi Sitio" style={{ width: '40px', height: 'auto' }} />Magus
                         </a>
                     </Navbar.Brand>                    
                     <Nav className="me-auto">
-                        <Nav.Link href="/home">Home</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/plantas">Plantas</Nav.Link>
                         <Nav.Link href="/macetas">Macetas</Nav.Link>
                         <NavDropdown title="Accesorios" id="navbarScrollingDropdown">

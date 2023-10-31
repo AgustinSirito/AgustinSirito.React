@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import { Avatar,} from 'antd'
 import {ShoppingCartOutlined} from '@ant-design/icons';
 
-
 const DetalleProducto = () => {
     let plantas = [
         {
@@ -62,7 +61,6 @@ const DetalleProducto = () => {
     let plantaid = 1
     // let plantaid = params.id
     let datosProducto = plantas.filter(planta=>{return(planta.id==plantaid)})[0]
-
 
     return(
 

@@ -2,7 +2,6 @@ import ProductCard from "../productCard/productCard"
 import '../plantas/plantas.css'
 
 
-
 const Plantas = () => {
     let plantas = [
         {

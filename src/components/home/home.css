@@ -1,10 +1,9 @@
-.saludoBienvenida {
-    font-size: 5px;
-}
-
 .bienvenida{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10  px;
+}
+p,h3{
+    color: black;
 }
