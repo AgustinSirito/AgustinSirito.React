@@ -1,3 +1,5 @@
-.saludoBienvenida {
-    font-size: 5px;
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 10px;
 }

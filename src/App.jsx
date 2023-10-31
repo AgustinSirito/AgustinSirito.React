@@ -1,11 +1,10 @@
 import './App.css'
-import CartWidget from './components/CartWidget/CartWidget'
 import ItemListContainer from './components/itemListContainer/itemListContainer'
 import Navbar from './components/navBar/navBar'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Plantas from './components/plantas/plantas'
-import DetalleProducto from './components/detalleProdcto/detalleProducto'
+import DetalleProducto from './components/detalleProducto/detalleProducto'
 
 function App() {
   return (

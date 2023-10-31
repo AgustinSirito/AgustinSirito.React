@@ -1,22 +1,26 @@
 
 import '../productCard/ProductCard.css'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 const ProductCard = ({data}) => {
 let link = 'plantas/' + data.id
     return(
-        <div class="card"> 
-            
-            <div class="cardContainer">
+        <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={data.imagen} />            
+            <Card.Body>
                 <a href={link}>
-                    <h4><b>{data.nombre}</b></h4>
-                    <p>imagen</p>
+                    <Card.Title>{data.nombre}</Card.Title>
                 </a>
-                <p><b>{data.descripcion}</b></p>
+                <Card.Text>{data.descripcion}</Card.Text>
                 <p>Precio: <b>{data.precio} $ </b></p>
                 <p>Cantidad: </p>
                 <input value={data.cantidad} min="0" type="number"/>
-            </div>
-        </div>
+                <div>
+                    <Button variant="primary"  href={link}>Mas info</Button>
+                </div>               
+            </Card.Body>
+        </Card>
     )
 }
 
