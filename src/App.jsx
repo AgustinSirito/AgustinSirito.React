@@ -7,18 +7,19 @@ import Plantas from './components/plantas/plantas'
 import DetalleProducto from './components/detalleProducto/detalleProducto'
 import Home from './components/home/home'
 
+
 function App() {
   return (
     <BrowserRouter>
-      <Navbar/>
+      <Navbar />
       <Routes>
-        <Route exact path="/" element={<Home greeting="Bienvenidos a Magus"/>} />
-        <Route exact path="/plantas" element={<Plantas/>} />
-        <Route exact path="/plantas/:id" element={<DetalleProducto/>} />
-        <Route exact path="/macetas" element={<ItemListContainer greeting="Macetas"/>} />
-        <Route exact path="/venenos" element={<ItemListContainer greeting="Venenos"/>} />
-        <Route exact path="/fertilizantes" element={<ItemListContainer greeting="Fertilizantes"/>} />
-        <Route exact path="/herramientas" element={<ItemListContainer greeting="Herramientas"/>} />
+        <Route path="/" element={<Home greeting="Bienvenidos a Magus"/>} />
+        <Route path="/category/plantas" element={<Plantas/>} />
+        <Route path="/detail/:id" element={<DetalleProducto/>} />
+        <Route path="/category/macetas" element={<ItemListContainer greeting="Macetas"/>} />
+        <Route path="/category/venenos" element={<ItemListContainer greeting="Venenos"/>} />
+        <Route path="/category/fertilizantes" element={<ItemListContainer greeting="Fertilizantes"/>} />
+        <Route path="/category/herramientas" element={<ItemListContainer greeting="Herramientas"/>} />
       </Routes>
     </BrowserRouter>
   )

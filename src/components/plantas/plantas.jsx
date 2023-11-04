@@ -5,7 +5,7 @@ import '../plantas/plantas.css'
 const Plantas = () => {
     let plantas = [
         {
-        "id":1,
+        "id": 1,
         "tipo":"suculenta", 
         "nombre":"Suculenta Haworthia", 
         "descripcion":"Pequeña planta suculenta", 
@@ -55,7 +55,7 @@ const Plantas = () => {
         "imagen": "../src/components/img/Echinocactus.jpeg"
         }
     ]
-    
+
     //react array loop
     return(
         <div class="cardContainer">
@@ -67,3 +67,22 @@ const Plantas = () => {
 }
 
 export default Plantas
+
+// import Item from "./Item";
+// import { Container, Row, Col } from "react-bootstrap";
+
+// function Plantas({ products }) {
+//     return (
+//         <Container>
+//             <Row>
+//                 {products.map((product) => (
+//                     <Col key={product.id} className="mt-5" xs={12} lg={4}>
+//                         <Item {...product} />
+//                     </Col>
+//                 ))}
+//             </Row>
+//         </Container>
+//     );
+// }
+
+// export default Plantas;

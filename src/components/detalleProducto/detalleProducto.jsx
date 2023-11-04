@@ -2,6 +2,7 @@
 import Card from 'react-bootstrap/Card';
 import { Avatar,} from 'antd'
 import {ShoppingCartOutlined} from '@ant-design/icons';
+import { Link } from "react-router-dom";
 
 const DetalleProducto = () => {
     let plantas = [
@@ -72,8 +73,7 @@ const DetalleProducto = () => {
                 <p>Precio: <b>{datosProducto.precio} $ </b></p>
                 <p>Cantidad: </p>
                 <input value={datosProducto.cantidad} min="0" type="number"/>
-                <a href=""><Avatar shape="circle" size="medium" icon={<ShoppingCartOutlined />} /> </a>
-
+                <div as={Link} to=""><Avatar shape="circle" size="medium" icon={<ShoppingCartOutlined />} /> </div>
             </Card.Body>
         </Card>
     )
