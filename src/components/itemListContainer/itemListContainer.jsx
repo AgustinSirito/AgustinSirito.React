@@ -1,62 +1,35 @@
-const ItemListContainer = ({greeting}) => {
+import ProductCard from "../productCard/productCard"
+import './itemListContainer.css'
+
+
+const ItemList = ({listaProducto}) => {
+    //react array loop
     return(
-        <div className="bienvenida">
-        <h1 className="saludoBienvenida">{greeting}</h1>
+        <div class="cardContainer">
+            {listaProducto.map(item=>(
+                <ProductCard data={item} ></ProductCard>
+            ))}
         </div>
     )
 }
 
-// export default ItemListContainer
+export default ItemList
 
-// import { useEffect, useState } from "react";
-// import { useParams } from "react-router-dom";
-// import { Spinner } from "react-bootstrap";
-// import mock from "../../mock";
-// import Plantas from "../plantas/plantas";
+// import Item from "./Item";
+// import { Container, Row, Col } from "react-bootstrap";
 
-// const ItemListContainer = ({ greeting }) => {
-//     const [products, setProducts] = useState([]);
-//     const [isLoading, setIsLoading] = useState(true);
-//     const { categoryId } = useParams();
-
-//     useEffect(() => {
-//         setIsLoading(true);
-
-//         function getProducts() {
-//             return new Promise((resolve) => {
-//                 setTimeout(() => {
-//                     resolve(mock);
-//                 }, 2000);
-//             });
-//         }
-
-//         getProducts(categoryId) //
-//             .then((products) => {
-//                 if (categoryId) {
-//                     setProducts(
-//                         products.filter((product) => product.category === categoryId)
-//                     );
-//                 } else {
-//                     setProducts(products);
-//                 }
-//             })
-//             .finally(() => {
-//                 setIsLoading(false);
-//             });
-//     }, [categoryId]);
-
+// function Plantas({ products }) {
 //     return (
-//         <div>
-//             <h1>{greeting}</h1>
-//             {isLoading ? (
-//                 <div className="d-flex justify-content-center">
-//                     <Spinner animation="grow" className="m-5" />
-//                 </div>
-//             ) : (
-//                 <Plantas products={products} />
-//             )}
-//         </div>
+//         <Container>
+//             <Row>
+//                 {products.map((product) => (
+//                     <Col key={product.id} className="mt-5" xs={12} lg={4}>
+//                         <Item {...product} />
+//                     </Col>
+//                 ))}
+//             </Row>
+//         </Container>
 //     );
-// };
+// }
 
-// export default ItemListContainer;
+// export default Plantas;

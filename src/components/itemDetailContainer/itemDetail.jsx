@@ -2,17 +2,9 @@ import Card from 'react-bootstrap/Card';
 import { Avatar,} from 'antd'
 import {ShoppingCartOutlined} from '@ant-design/icons';
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
 
 
-const DetalleProducto = () => {
-    
-
-    // const params = useParams();
-    let plantaid = 1
-    // let plantaid = params.id
-    let datosProducto = plantas.filter(planta=>{return(planta.id==plantaid)})[0]
-
+const ItemDetail = ({datosProducto}) => {
     return(
 
         <Card style={{ width: '18rem' }}>             
@@ -30,4 +22,4 @@ const DetalleProducto = () => {
 }
 
 
-export default DetalleProducto
+export default ItemDetail

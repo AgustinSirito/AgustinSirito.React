@@ -3,10 +3,10 @@ import ItemListContainer from './components/itemListContainer/itemListContainer'
 import Navbar from './components/navBar/navBar'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Plantas from './components/plantas/plantas'
-import DetalleProducto from './components/detalleProducto/detalleProducto'
+import ItemDetailContainer from './components/itemDetailContainer/itemDetailContainer'
 import Home from './components/home/home'
-
+import plantasDB from './DB/plantasDB'
+import macetasDB from './DB/macetasDB'
 
 function App() {
   return (
@@ -14,12 +14,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home greeting="Bienvenidos a Magus"/>} />
-        <Route path="/category/plantas" element={<Plantas/>} />
-        <Route path="/detail/:id" element={<DetalleProducto/>} />
-        <Route path="/category/macetas" element={<ItemListContainer greeting="Macetas"/>} />
-        <Route path="/category/venenos" element={<ItemListContainer greeting="Venenos"/>} />
+        <Route path="/category/plantas" element={<ItemListContainer listaProducto={plantasDB}/>}/>
+        <Route path="/detail/:id" element={<ItemDetailContainer/>} />
+        <Route path="/category/macetas" element={<ItemListContainer listaProducto={macetasDB}/>}/>
+        {/* <Route path="/category/venenos" element={<ItemListContainer greeting="Venenos"/>} />
         <Route path="/category/fertilizantes" element={<ItemListContainer greeting="Fertilizantes"/>} />
-        <Route path="/category/herramientas" element={<ItemListContainer greeting="Herramientas"/>} />
+        <Route path="/category/herramientas" element={<ItemListContainer greeting="Herramientas"/>} /> */}
       </Routes>
     </BrowserRouter>
   )
